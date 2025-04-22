@@ -1,0 +1,148 @@
+        /* Styles specific to embedding the InterpreCoach UI */
+        #interprecoach-ui-wrapper {
+            background-color: #1f2937;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2),
+                        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            max-width: 45rem;
+            margin: 2rem auto 3rem auto; /* Increased bottom margin for CTA button */
+            border: 1px solid #4b5563;
+            height: 60vh;
+            min-height: 400px;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+            aspect-ratio: 16/9;
+            height: auto;
+            min-height: auto;
+            max-height: none;
+            width: 100%;
+            max-width: 800px;
+        }
+        #interprecoach-ui-container {
+            padding: 0;
+            max-width: 100%;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #1f2937;
+            border-radius: 0.75rem;
+        }
+        #interprecoach-ui-container .content-wrapper-flex {flex-grow: 1; display: flex; flex-direction: column; min-height: 0; /* Fix flexbox overflow */}
+        #interprecoach-ui-container .section-card { 
+            background-color: #2d3748; 
+            border: 1px solid #4a5568; 
+            border-radius: 0.75rem; 
+            padding: 1.5rem; 
+            margin-bottom: 1rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+            overflow: hidden; 
+            position: relative; 
+            flex-grow: 1; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 0; 
+        }
+        #interprecoach-ui-container .section-card + .section-card { margin-top: 0.75rem; flex-grow: 0; flex-shrink: 0; } /* Input bar doesn't grow */
+        #interprecoach-ui-container #audio-visualizer-canvas { height: 5vw; width: 5vw; margin-left: 0.5rem; }
+        @media (max-width: 768px) {
+            #interprecoach-ui-container #audio-visualizer-canvas { height: 8vw; width: 8vw; }
+        }
+        @media (max-width: 480px) {
+            #interprecoach-ui-container #audio-visualizer-canvas { height: 10vw; width: 10vw; }
+        }
+        #interprecoach-ui-container .transcription-section { 
+            color: #e2e8f0; 
+            line-height: 1.6; 
+            padding: 1.5rem; 
+            background-color: #2d3748; 
+            border-radius: 0.75rem 0.75rem 0 0; 
+            flex-shrink: 0; 
+            min-height: 80px; 
+            padding-top: 2rem; 
+            border-top-left-radius: 0.5rem; 
+            border-top-right-radius: 0.5rem; 
+        }
+        #interprecoach-ui-container .detection-section { 
+            background-color: #2d3748; 
+            padding: 1.5rem; 
+            border-radius: 0 0 0.75rem 0.75rem; 
+            border-top: 1px solid #4a5568; 
+            max-height: 28vh; 
+        }
+        #interprecoach-ui-container #transcription-text { 
+            color: #e2e8f0; 
+            font-size: 1rem; 
+            line-height: 1.6; 
+            margin-bottom: 1rem; 
+        }
+        #interprecoach-ui-container .colored-term { 
+            color: #f97316; 
+            font-weight: 600; 
+            padding: 0.1rem 0.3rem; 
+            border-radius: 0.25rem; 
+            background-color: rgba(249, 115, 22, 0.1); 
+        }
+        #interprecoach-ui-container .icon-button { background: none; border: none; padding: 0.5rem; margin-left: 0.5rem; cursor: pointer; border-radius: 0.5rem; line-height: 0; transition: background-color 0.2s ease; outline: none; }
+        #interprecoach-ui-container .icon-button:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
+        #interprecoach-ui-container #audio-visualizer-canvas { height: 1.5em; width: 1.5em; margin-left: 0.5rem; }
+        #interprecoach-ui-container .send-icon { filter: invert(1); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        #interprecoach-ui-container .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        #interprecoach-ui-container .icon-button { background: none; border: none; padding: 0.5rem; margin-left: 0.5rem; cursor: pointer; border-radius: 0.5rem; line-height: 0; transition: background-color 0.2s ease; }
+        #interprecoach-ui-container .icon-button:hover { background-color: rgba(255, 255, 255, 0.2); }
+        #interprecoach-ui-container .term-details { position: absolute; left: 0; top: 100%; width: calc(100% + 1rem); margin-left: -0.5rem; margin-top: 0.25rem; z-index: 50; background-color: rgba(243, 244, 246, 0.98); color: #1f2937; border-radius: 0.375rem; padding: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.12); display: none; transform: translateY(-5px); transition: transform 0.2s ease-out; }
+        #interprecoach-ui-container .term-details.visible { display: block; transform: translateY(0); }
+        #interprecoach-ui-container .term-details.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        #interprecoach-ui-container .term-details img.med-image { width: 30px; height: 30px; margin-right: 0.5rem; }
+        #interprecoach-ui-container .term-details p, #interprecoach-ui-container .term-details .detail-label { margin-bottom: 0.25rem; clear: both; font-size: 0.8rem; line-height: 1.1rem; }
+        #interprecoach-ui-container .term-details .detail-label { font-weight: 600; color: #374151; }
+        #interprecoach-ui-container .term-list-item:hover .colored-term { text-decoration: underline; text-decoration-color: #fb923c; }
+        #interprecoach-ui-container .transcription-section, #interprecoach-ui-container .detection-section {
+            scrollbar-width: thin; /* Fallback for non-WebKit browsers */
+            scrollbar-color: #6b7280 rgba(55, 65, 81, 0.5); /* Thumb and track colors */
+        }
+        #interprecoach-ui-container .transcription-section::-webkit-scrollbar, #interprecoach-ui-container .detection-section::-webkit-scrollbar { width: 6px; height: 6px; }
+        #interprecoach-ui-container .transcription-section::-webkit-scrollbar-track, #interprecoach-ui-container .detection-section::-webkit-scrollbar-track { background: rgba(55, 65, 81, 0.5); border-radius: 3px; }
+        #interprecoach-ui-container .transcription-section::-webkit-scrollbar-thumb, #interprecoach-ui-container .detection-section::-webkit-scrollbar-thumb { background-color: #6b7280; border-radius: 3px; }
+        #interprecoach-ui-container .window-controls { position: absolute; top: 0.5rem; right: 0.5rem; z-index: 60; display: flex; gap: 0.25rem; }
+        #interprecoach-ui-container .window-control-button { background: rgba(255, 255, 255, 0.1); border: none; padding: 0.25rem; border-radius: 9999px; line-height: 0; cursor: pointer; transition: background-color 0.2s ease; }
+        #interprecoach-ui-container .window-control-button:hover { background: rgba(255, 255, 255, 0.2); }
+        #interprecoach-ui-container h2 { text-align: left; font-size: 1.125rem; /* text-lg */ margin-bottom: 0.75rem; /* mb-3 */ color: #93c5fd; /* text-blue-400 */ } /* Override general h2 */
+        #interprecoach-ui-container .detection-section h2 { padding-top: 0;} /* Remove extra padding */
+        #interprecoach-ui-container .input-bar { 
+            background-color: #374151; 
+            border: 1px solid #4b5563; 
+            border-radius: 0.75rem; 
+            padding: 0.75rem; 
+            margin-top: 1rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 0.5rem; 
+        }
+        #interprecoach-ui-container .input-bar input { 
+            background-color: #1f2937; 
+            border: 1px solid #4b5563; 
+            color: #e2e8f0; 
+            padding: 0.75rem 1rem; 
+            border-radius: 0.5rem; 
+            width: 100%; 
+        }
+        .demo-indicator { 
+            position: absolute; 
+            top: 1rem; 
+            left: 1rem; 
+            background: rgba(59, 130, 246, 0.15); 
+            color: #93c5fd; 
+            padding: 0.375rem 0.75rem; 
+            border-radius: 0.375rem; 
+            font-size: 0.875rem; 
+            font-weight: 500; 
+            backdrop-filter: blur(4px); 
+            border: 1px solid rgba(147, 197, 253, 0.2); 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }

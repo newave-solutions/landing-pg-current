@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterpreLab - AI-Powered Tools for Medical Interpreters</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+<body class="bg-gray-50" id="bg-gray-50">
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 p-4 md:px-8 lg:px-16 transition-colors duration-300 ease-in-out">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#hero" class="logo-link text-2xl md:text-3xl font-bold">InterpreLab</a>
+            <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+               
+                <a href="#interprecoach" class="nav-link">InterpreCoach</a>
+                <a href="#interprebot" class="nav-link">InterpreBot</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#lsp-benefits" class="nav-link">For LSPs</a>
+                <a href="#signup-form" class="signup-button px-4 py-2 rounded-md font-semibold transition duration-200 text-sm">
+                    Signup
+                </a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-blue-900 bg-opacity-95 p-4">
+             <nav class="flex flex-col space-y-4">
+               
+                <a href="#interprecoach" class="text-white hover:text-blue-200">InterpreCoach</a>
+                <a href="#interprebot" class="text-white hover:text-blue-200">InterpreBot</a>
+                <a href="#testimonials" class="text-white hover:text-blue-200">Testimonials</a>
+                <a href="#lsp-benefits" class="text-white hover:text-blue-200">For LSPs</a>
+                <a href="#signup-form" class="mt-2 block w-full text-center bg-white text-blue-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition duration-200">
+                    Signup
+                </a>
+             </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" data-header-theme="dark" class="hero-section relative flex items-center justify-center text-center text-white p-4 overflow-hidden">
+            <div class="absolute inset-0 -z-20">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3MTMxOTI0MDR8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Healthcare technology background" class="hero-bg-image active">
+                <img src="https://images.unsplash.com/photo-1584515933487-75980c15190b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfHNlYXJjaHw1fHxjb21tdW5pY2F0aW9uJTIwYnJpZGdlfGVufDB8fHx8MTcxMzE5MjQzN3ww&ixlib=rb-4.0.3&q=80&w=1080" alt="Diverse communication background" class="hero-bg-image">
+                <img src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfHNlYXJjaHwzfHxhaSUyMGxlYXJuaW5nfGVufDB8fHx8MTcxMzE5MjQ2NHww&ixlib=rb-4.0.3&q=80&w=1080" alt="AI learning background" class="hero-bg-image">
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-40 -z-10"></div>
+            <div class="z-10 relative max-w-4xl mx-auto">
+             
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">AI-Powered Tools for Flawless Medical Interpretation</h1>
+                <p class="text-lg md:text-xl lg:text-2xl mb-8 font-light text-blue-100 max-w-2xl mx-auto">Enhance accuracy, reduce cognitive load, and master your skills with InterpreCoach & InterpreBot.</p>
+                
+                <p class="text-sm text-blue-200 mb-8">(Join interpreters improving patient safety across thousands of encounters)</p>
+                <a href="#challenge" class="inline-block bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg text-lg hover:bg-gray-100 hover:text-blue-800 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Explore Solutions
+                </a>
+            </div>
+        </section>
+
+        <section id="challenge" data-header-theme="light" class="standard-section bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-900">The High Stakes of Medical Interpreting</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Navigating complex terminology, Active listening and executing top quality renditions is paramount when a life is on the line.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="flex flex-col items-center">
+                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a4 4 0 00-5.656 0M4.572 8.572a4 4 0 000 5.656m11.314-5.656a4 4 0 010 5.656m-5.656-5.656a4 4 0 015.656 0M6 18L18 6M6 6l12 12"></path>
+                        </svg> 
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Complexity & Accuracy</h3>
+                        <p class="text-gray-500">Juggling dense medical jargon in multiple languages demands peak concentration.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg> 
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cognitive Overload</h3>
+                        <p class="text-gray-500">Simultaneous processing leads to fatigue and potential burnout.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg> 
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient Safety & Compliance</h3>
+                        <p class="text-gray-500">Ensuring clear communication is vital for care quality and meeting mandates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interprecoach" data-header-theme="light" class="standard-section bg-gray-100">
+             <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row md:items-center gap-12">
+                    <div class="md:w-1/2">
+                        <div class="bg-gray-200 rounded-lg shadow-lg aspect-video flex items-center justify-center text-gray-500 font-semibold p-8">
+                            <img src="https://placehold.co/600x400/e2e8f0/9ca3af?text=InterpreCoach+UI+Mockup" alt="InterpreCoach UI Mockup" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-900">Never Miss a Term Again: Real-time Support with InterpreCoach</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Focus on the nuances of communication, not just recalling terminology. InterpreCoach works seamlessly in your browser during live sessions.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                          
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="text-gray-800">Reduce Cognitive Load:</strong> Live transcription captures the dialogue, freeing up your mental bandwidth.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="text-gray-800">Ensure Accuracy:</strong> Instantly detect and look up complex medical terms without missing a beat.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="text-gray-800">Refine Your Skills:</strong> Get objective post-session feedback to identify growth areas.</span>
+                            </li>
+                        </ul>
+                        <p class="mt-8 text-lg font-semibold text-gray-700">Ready to elevate your interpreting practice?</p>
+                        <a href="#signup-form" class="mt-4 inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">
+                            Become an Early Tester
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interprebot" data-header-theme="light" class="standard-section bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row md:items-center gap-12">
+                    
+                    <div class="md:w-1/2 md:order-1">
+                        
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-900">Master Your Craft with Your AI Mentor: InterpreBot</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                           Go beyond theory. Practice interpreting skills in realistic, AI-guided scenarios and get personalized feedback to accelerate your learning curve.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="text-gray-800">Personalized Practice:</strong> Engage in AI-driven scenarios tailored to medical interpreting challenges.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="text-gray-800">Targeted Skill Building:</strong> Comprehensive assessments identify strengths and pinpoint areas needing focus.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="text-gray-800">Visualize Your Growth:</strong> Track progress across key metrics on your performance dashboard.</span>
+                            </li>
+                        </ul>
+                        <p class="mt-8 text-lg font-semibold text-gray-700">Be the first to experience the future of interpreter training.</p>
+                        <a href="#waitlist-form" class="mt-4 inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">
+                            Join the Waitlist
+                        </a>
+                    </div>
+                     <div class="md:w-1/2 md:order-2">
+                        <div class="bg-gray-300 rounded-lg shadow-lg aspect-video flex items-center justify-center text-gray-600 font-semibold p-8">
+                            <img src="https://placehold.co/600x400/d1d5db/4b5563?text=InterpreBot+Visual/Dashboard" alt="InterpreBot Visual/Dashboard Mockup" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" data-header-theme="light" class="standard-section bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-blue-900">Getting Started is Simple</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    
+                    <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                         <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4">1</div>
+                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Sign Up & Install</h3>
+                         <p class="text-gray-500">Join the waitlist or early access program and easily install the InterpreCoach extension.</p>
+                    </div>
+     
+                     <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                         <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4">2</div>
+                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Train & Assist</h3>
+                         <p class="text-gray-500">Utilize InterpreCoach during calls for live support and practice skills with InterpreBot modules.</p>
+                    </div>
+                     
+                     <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                         <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4">3</div>
+                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Review & Improve</h3>
+                         <p class="text-gray-500">Analyze post-session feedback and track your progress on the performance dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" data-header-theme="dark" class="standard-section bg-gradient-to-r from-blue-400 to-blue-700 text-white overflow-hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Trusted by Interpreters Like You</h2>
+                <div class="testimonial-swiper-container">
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+                         
+                            <div class="swiper-slide text-center px-8 py-12"> 
+                                <svg class="w-12 h-12 mx-auto mb-6 text-blue-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path> 
+                                    <path d="M10.73 7.27a.75.75 0 011.06 0l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.97-2.97-2.97-2.97a.75.75 0 010-1.06zM4.73 7.27a.75.75 0 011.06 0l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.97-2.97-2.97-2.97a.75.75 0 010-1.06z" opacity="0.3"></path> 
+                                </svg> 
+                                <p class="text-xl italic mb-6 text-blue-100">"InterpreCoach is a game-changer! The real-time terminology help saves me precious seconds..."</p> 
+                                <div> 
+                                    <p class="font-semibold text-white text-lg">Maria G.</p> <p class="text-sm text-blue-200">Certified Medical Interpreter (CMI)</p> 
+                                </div> 
+                            </div>
+                            <div class="swiper-slide text-center px-8 py-12"> 
+                                <svg class="w-12 h-12 mx-auto mb-6 text-blue-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd">
+
+                                    </path> 
+                                    <path d="M10.73 7.27a.75.75 0 011.06 0l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.97-2.97-2.97-2.97a.75.75 0 010-1.06zM4.73 7.27a.75.75 0 011.06 0l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.97-2.97-2.97-2.97a.75.75 0 010-1.06z" opacity="0.3"></path> </svg> 
+                                    <p class="text-xl italic mb-6 text-blue-100">"As someone new... InterpreBot's training modules are invaluable. The feedback helps me pinpoint exactly where I need to improve."</p> 
+                                    <div> 
+                                        <p class="font-semibold text-white text-lg">David R.</p> <p class="text-sm text-blue-200">Interpreter Training Student</p> 
+                                    </div> 
+                                </div>
+                            <div class="swiper-slide text-center px-8 py-12"> 
+                                <svg class="w-12 h-12 mx-auto mb-6 text-blue-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path> 
+                                    <path d="M10.73 7.27a.75.75 0 011.06 0l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.97-2.97-2.97-2.97a.75.75 0 010-1.06zM4.73 7.27a.75.75 0 011.06 0l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.97-2.97-2.97-2.97a.75.75 0 010-1.06z" opacity="0.3"></path> 
+                                </svg> 
+                                    <p class="text-xl italic mb-6 text-blue-100">"Finally, tools that understand the unique challenges we face. InterpreLab is building something truly essential..."</p> 
+                                    <div> <p class="font-semibold text-white text-lg">Elena S.</p> <p class="text-sm text-blue-200">Healthcare Language Access Coordinator</p> 
+                                    </div> 
+                                </div>
+                            <div class="swiper-slide text-center px-8 py-12"> 
+                                <svg class="w-12 h-12 mx-auto mb-6 text-blue-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path> 
+                                    <path d="M10.73 7.27a.75.75 0 011.06 0l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.97-2.97-2.97-2.97a.75.75 0 010-1.06zM4.73 7.27a.75.75 0 011.06 0l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.97-2.97-2.97-2.97a.75.75 0 010-1.06z" opacity="0.3"></path> </svg> 
+                                    <p class="text-xl italic mb-6 text-blue-100">"The post-session feedback... helps me reflect on my performance objectively. It's like having a mentor review my work."</p> <div> <p class="font-semibold text-white text-lg">Carlos M.</p> <p class="text-sm text-blue-200">Experienced Freelance Interpreter</p> </div> </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination mt-8 relative"></div>
+                    <div class="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2"></div>
+                    <div class="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lsp-benefits" data-header-theme="light" class="standard-section bg-gray-100">
+             <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900">Built for Compliance and Quality Assurance</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 max-w-4xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
+                         <div class="flex items-center mb-3">
+                             <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                             <h3 class="text-xl font-semibold text-blue-800">Enhance Quality & Transparency</h3>
+                         </div>
+                        <p class="text-gray-600">
+                            Gain valuable insights into interpreter performance with objective data. Ensure consistent, high-quality language access and demonstrate value to clients and stakeholders.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
+                         <div class="flex items-center mb-3">
+                             <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                             <h3 class="text-xl font-semibold text-blue-800">Streamline Compliance</h3>
+                         </div>
+                        <p class="text-gray-600">
+                            Support adherence to regulatory mandates including Title VI, Section 1557 ACA, and HIPAA. Our platform is built on a secure, SOC 2 compliant architecture.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-lg font-semibold text-gray-700 mb-4">Need a tailored solution for your organization?</p>
+                    <a href="#contact-form" class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">
+                        Contact Us for Enterprise Plans
+                    </a>
+                </div>
+            </div>
+        </section>
+
+         <section id="resources" data-header-theme="light" class="standard-section bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900">Recommended Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  
+                    <div class="border border-gray-200 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
+                        <h3 class="font-semibold text-lg mb-2 text-gray-800">The Impact of AI on Medical Interpreting</h3>
+                        <p class="text-sm text-gray-500 mb-3">Explore how technology is shaping the future of the profession.</p>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-semibold">Read More &rarr;</a>
+                    </div>
+                    
+                     <div class="border border-gray-200 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
+                        <h3 class="font-semibold text-lg mb-2 text-gray-800">Mastering Medical Terminology</h3>
+                        <p class="text-sm text-gray-500 mb-3">Tips and techniques for interpreters to expand their vocabulary.</p>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-semibold">Read More &rarr;</a>
+                    </div>
+                 
+                     <div class="border border-gray-200 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
+                        <h3 class="font-semibold text-lg mb-2 text-gray-800">Understanding Section 1557 Compliance</h3>
+                        <p class="text-sm text-gray-500 mb-3">Key requirements for language access in healthcare settings.</p>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-semibold">Read More &rarr;</a>
+                    </div>
+  
+                     <div class="border border-gray-200 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
+                        <h3 class="font-semibold text-lg mb-2 text-gray-800">Reducing Cognitive Load in Interpreting</h3>
+                        <p class="text-sm text-gray-500 mb-3">Strategies and tools to manage mental fatigue during sessions.</p>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-semibold">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" data-header-theme="dark" class="bg-gray-900 text-gray-400 py-12 standard-section"> 
+        <div class="container mx-auto px-4 text-center"> <nav class="mb-6"> 
+            <a href="#challenge" class="hover:text-white mx-3">The Challenge</a> 
+            <a href="#interprecoach" class="hover:text-white mx-3">InterpreCoach</a> 
+            <a href="#interprebot" class="hover:text-white mx-3">InterpreBot</a> 
+            <a href="#testimonials" class="hover:text-white mx-3">Testimonials</a>
+            <a href="#lsp-benefits" class="hover:text-white mx-3">For LSPs</a> 
+            <a href="#resources" class="hover:text-white mx-3">Resources</a>  
+        </nav> <div class="footer-links mb-6"> 
+            <a href="#" class="text-sm text-gray-500 hover:text-gray-300 mx-2">Privacy Policy</a> 
+            <span class="text-gray-600">|</span> 
+            <a href="#" class="text-sm text-gray-500 hover:text-gray-300 mx-2">Terms of Service</a> 
+        </div> 
+            <p class="text-sm">&copy; 2025 InterpreLab. All Rights Reserved.
+        </p> 
+        </div> 
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
