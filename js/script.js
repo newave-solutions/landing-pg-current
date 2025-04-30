@@ -1,3 +1,63 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Intersection Observer for Challenge Videos ---
+    const challengeVideos = document.querySelectorAll('.challenge-video');
+
+    if (challengeVideos.length > 0) {
+        const videoObserverOptions = {
+            root: null, // relative to document viewport
+            rootMargin: '0px',
+            threshold: 0.5 // Trigger when 50% of the video is visible
+        };
+
+        const videoObserverCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (entry.isIntersecting) {
+                    // Play the video if it's intersecting and hasn't played yet or is paused
+                    // Using a promise to handle potential play() errors
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(error => {
+                            // Autoplay was prevented or other error
+                            console.error("Video play failed:", error);
+                            // Optionally hide video or show controls if play fails
+                        });
+                    }
+                } else {
+                    // Pause the video if it's not intersecting
+                    video.pause();
+                }
+            });
+        };
+
+        const videoObserver = new IntersectionObserver(videoObserverCallback, videoObserverOptions);
+
+        challengeVideos.forEach(video => {
+            videoObserver.observe(video);
+        });
+    }
+
+    const videos = document.querySelectorAll('.challenge-video');
+    
+    videos.forEach(video => {
+        video.addEventListener('loadeddata', () => {
+            video.classList.add('loaded');
+            video.play().catch(err => {
+                console.warn('Auto-play failed:', err);
+            });
+        });
+
+        video.addEventListener('error', (e) => {
+            console.error('Video loading error:', e);
+            video.style.display = 'none';
+        });
+    });
+
+    // --- Keep your existing script.js code below ---
+    // (Header scroll effect, mobile menu, swiper init, etc.)
+    // ... your other JavaScript code ...
+
+}); // End DOMContentLoaded
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,31 +103,50 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     // --- Hero Background Slideshow ---
     const heroImages = document.querySelectorAll('#hero .hero-bg-image');
     let currentImageIndex = 0;
     const slideInterval = 3000; // 3 seconds
 
     function changeHeroImage() {
+        // Check if there are images to cycle through
         if (heroImages.length > 0) {
-            // Fade out current image
-            heroImages[currentImageIndex].classList.remove('opacity-100');
-            heroImages[currentImageIndex].classList.add('opacity-0');
-            heroImages[currentImageIndex].classList.remove('active'); // Optional: if using 'active' class
+            // Get the current image element
+            const currentImage = heroImages[currentImageIndex];
+            // Make it fade out
+            currentImage.classList.remove('opacity-100', 'active'); // Remove visibility classes
+            currentImage.classList.add('opacity-0');
 
-            // Increment index and wrap around
+            // Calculate the index for the next image, wrapping around
             currentImageIndex = (currentImageIndex + 1) % heroImages.length;
 
-            // Fade in next image
-            heroImages[currentImageIndex].classList.remove('opacity-0');
-            heroImages[currentImageIndex].classList.add('opacity-100');
-            heroImages[currentImageIndex].classList.add('active'); // Optional: if using 'active' class
+            // Get the next image element
+            const nextImage = heroImages[currentImageIndex];
+            // Make it fade in
+            nextImage.classList.remove('opacity-0');
+            nextImage.classList.add('opacity-100', 'active'); // Add visibility classes
         }
     }
 
-    if (heroImages.length > 1) { // Only run slideshow if there's more than one image
+    // Only start the interval if there's more than one image
+    if (heroImages.length > 1) {
+        // --- Initial Setup ---
+        // Ensure only the first image is visible initially, regardless of HTML state
+        heroImages.forEach((img, index) => {
+            if (index === currentImageIndex) { // Check against the starting index
+                img.classList.add('opacity-100', 'active');
+                img.classList.remove('opacity-0');
+            } else {
+                img.classList.add('opacity-0');
+                img.classList.remove('opacity-100', 'active');
+            }
+        });
+        // Start the slideshow timer
         setInterval(changeHeroImage, slideInterval);
+    } else if (heroImages.length === 1) {
+        // If there's only one image, make sure it's visible
+        heroImages[0].classList.add('opacity-100', 'active');
+        heroImages[0].classList.remove('opacity-0');
     }
 
 

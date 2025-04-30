@@ -6,17 +6,21 @@
     <title>InterpreLab - AI-Powered Tools for Medical Interpreters</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 
     <link rel="stylesheet" href="/styles.css">
 
 </head>
-<body class="bg-gray-50" id="bg-gray-50">
+
 
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 p-4 md:px-8 lg:px-16 transition-colors duration-300 ease-in-out">
         <div class="container mx-auto flex justify-between items-center">
@@ -54,131 +58,105 @@
     </header>
 
     <main>
-        <section id="hero" data-header-theme="dark" class="hero-section relative flex items-center justify-center text-center text-white p-4 overflow-hidden">
+        
+        <section id="hero" data-header-theme="dark" class="hero-section relative flex items-center justify-center text-center text-white p-4 overflow-hidden min-h-screen">
             <div class="absolute inset-0 -z-20">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3MTMxOTI0MDR8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Healthcare technology background" class="hero-bg-image active">
-                <img src="https://images.unsplash.com/photo-1584515933487-75980c15190b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfHNlYXJjaHw1fHxjb21tdW5pY2F0aW9uJTIwYnJpZGdlfGVufDB8fHx8MTcxMzE5MjQzN3ww&ixlib=rb-4.0.3&q=80&w=1080" alt="Diverse communication background" class="hero-bg-image">
-                <img src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfHNlYXJjaHwzfHxhaSUyMGxlYXJuaW5nfGVufDB8fHx8MTcxMzE5MjQ2NHww&ixlib=rb-4.0.3&q=80&w=1080" alt="AI learning background" class="hero-bg-image">
+                <!-- Replace video tags with image backgrounds since the URLs point to images -->
+                <img loading="lazy" 
+                     src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920" 
+                     alt="Healthcare technology background" 
+                     class="hero-bg-image absolute inset-0 w-full h-full object-cover active">
+                
+                <img loading="lazy" 
+                     src="https://images.unsplash.com/photo-1584515933487-75980c15190b?auto=format&fit=crop&w=1920" 
+                     alt="Diverse communication background" 
+                     class="hero-bg-image absolute inset-0 w-full h-full object-cover">
+                
+                <img loading="lazy" 
+                     src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?auto=format&fit=crop&w=1920" 
+                     alt="AI learning background" 
+                     class="hero-bg-image absolute inset-0 w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-black bg-opacity-40 -z-10"></div>
             <div class="z-10 relative max-w-4xl mx-auto">
-             
+        
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">AI-Powered Tools for Flawless Medical Interpretation</h1>
                 <p class="text-lg md:text-xl lg:text-2xl mb-8 font-light text-blue-100 max-w-2xl mx-auto">Enhance accuracy, reduce cognitive load, and master your skills with InterpreCoach & InterpreBot.</p>
-                
+        
                 <p class="text-sm text-blue-200 mb-8">(Join interpreters improving patient safety across thousands of encounters)</p>
                 <a href="#challenge" class="inline-block bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg text-lg hover:bg-gray-100 hover:text-blue-800 transition duration-300 transform hover:scale-105 shadow-lg">
                     Explore Solutions
                 </a>
             </div>
         </section>
-
-        <section id="challenge" data-header-theme="light" class="standard-section bg-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-900">The High Stakes of Medical Interpreting</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Navigating complex terminology, Active listening and executing top quality renditions is paramount when a life is on the line.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <div class="flex flex-col items-center">
-                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a4 4 0 00-5.656 0M4.572 8.572a4 4 0 000 5.656m11.314-5.656a4 4 0 010 5.656m-5.656-5.656a4 4 0 015.656 0M6 18L18 6M6 6l12 12"></path>
-                        </svg> 
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Complexity & Accuracy</h3>
-                        <p class="text-gray-500">Juggling dense medical jargon in multiple languages demands peak concentration.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg> 
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cognitive Overload</h3>
-                        <p class="text-gray-500">Simultaneous processing leads to fatigue and potential burnout.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg> 
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient Safety & Compliance</h3>
-                        <p class="text-gray-500">Ensuring clear communication is vital for care quality and meeting mandates.</p>
-                    </div>
+        
+<section id="challenge" data-header-theme="light" class="standard-section bg-white py-16 md:py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-900">The High Stakes of Medical Interpreting</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Navigating complex terminology, Active listening and executing top quality renditions is paramount when a life is on the line.</p>
+        <div class="mx-auto space-y-12 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
+            <!-- Video Card 1 - Stressed -->
+            <div class="video-card">
+                <video class="challenge-video"
+                       src="videos/stressed.mp4"
+                       poster="images/stressed-poster.jpg"
+                       playsinline 
+                       muted 
+                       loop>
+                    <img class="challenge-video-fallback" 
+                         src="images/stressed-poster.jpg" 
+                         alt="Stress in medical interpreting">
+                </video>
+                <div class="video-overlay"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full p-8">
+                    <h3 class="text-xl font-semibold text-white mb-2">Complexity & Accuracy</h3>
+                    <p class="text-gray-200">Managing medical terminology while maintaining precision</p>
                 </div>
             </div>
-        </section>
 
-        <section id="interprecoach" data-header-theme="light" class="standard-section bg-gray-100">
-             <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row md:items-center gap-12">
-                    <div class="md:w-1/2">
-                        <div class="bg-gray-200 rounded-lg shadow-lg aspect-video flex items-center justify-center text-gray-500 font-semibold p-8">
-                            <img src="https://placehold.co/600x400/e2e8f0/9ca3af?text=InterpreCoach+UI+Mockup" alt="InterpreCoach UI Mockup" class="rounded-lg w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div class="md:w-1/2">
-
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-900">Never Miss a Term Again: Real-time Support with InterpreCoach</h2>
-                        <p class="text-lg text-gray-600 mb-6">
-                            Focus on the nuances of communication, not just recalling terminology. InterpreCoach works seamlessly in your browser during live sessions.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                          
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span><strong class="text-gray-800">Reduce Cognitive Load:</strong> Live transcription captures the dialogue, freeing up your mental bandwidth.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span><strong class="text-gray-800">Ensure Accuracy:</strong> Instantly detect and look up complex medical terms without missing a beat.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span><strong class="text-gray-800">Refine Your Skills:</strong> Get objective post-session feedback to identify growth areas.</span>
-                            </li>
-                        </ul>
-                        <p class="mt-8 text-lg font-semibold text-gray-700">Ready to elevate your interpreting practice?</p>
-                        <a href="#signup-form" class="mt-4 inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">
-                            Become an Early Tester
-                        </a>
-                    </div>
+            <!-- Video Card 2 - No Terms -->
+            <div class="video-card">
+                <video class="challenge-video"
+                       src="videos/no-terms.mp4"
+                       poster="images/no-terms-poster.jpg"
+                       playsinline 
+                       muted 
+                       loop>
+                    <img class="challenge-video-fallback" 
+                         src="images/no-terms-poster.jpg" 
+                         alt="Cognitive challenges">
+                </video>
+                <div class="video-overlay"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full p-8">
+                    <h3 class="text-xl font-semibold text-white mb-2">Cognitive Overload</h3>
+                    <p class="text-gray-200">Handling multiple tasks simultaneously</p>
                 </div>
             </div>
-        </section>
 
-        <section id="interprebot" data-header-theme="light" class="standard-section bg-white">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row md:items-center gap-12">
-                    
-                    <div class="md:w-1/2 md:order-1">
-                        
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-900">Master Your Craft with Your AI Mentor: InterpreBot</h2>
-                        <p class="text-lg text-gray-600 mb-6">
-                           Go beyond theory. Practice interpreting skills in realistic, AI-guided scenarios and get personalized feedback to accelerate your learning curve.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span><strong class="text-gray-800">Personalized Practice:</strong> Engage in AI-driven scenarios tailored to medical interpreting challenges.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span><strong class="text-gray-800">Targeted Skill Building:</strong> Comprehensive assessments identify strengths and pinpoint areas needing focus.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span><strong class="text-gray-800">Visualize Your Growth:</strong> Track progress across key metrics on your performance dashboard.</span>
-                            </li>
-                        </ul>
-                        <p class="mt-8 text-lg font-semibold text-gray-700">Be the first to experience the future of interpreter training.</p>
-                        <a href="#waitlist-form" class="mt-4 inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">
-                            Join the Waitlist
-                        </a>
-                    </div>
-                     <div class="md:w-1/2 md:order-2">
-                        <div class="bg-gray-300 rounded-lg shadow-lg aspect-video flex items-center justify-center text-gray-600 font-semibold p-8">
-                            <img src="https://placehold.co/600x400/d1d5db/4b5563?text=InterpreBot+Visual/Dashboard" alt="InterpreBot Visual/Dashboard Mockup" class="rounded-lg w-full h-full object-cover">
-                        </div>
-                    </div>
+            <!-- Video Card 3 - Misunderstood -->
+            <div class="video-card">
+                <video class="challenge-video"
+                       src="videos/misunderstood.mp4"
+                       poster="images/misunderstood-poster.jpg"
+                       playsinline 
+                       muted 
+                       loop>
+                    <img class="challenge-video-fallback" 
+                         src="images/misunderstood-poster.jpg" 
+                         alt="Patient safety concerns">
+                </video>
+                <div class="video-overlay"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full p-8">
+                    <h3 class="text-xl font-semibold text-white mb-2">Patient Safety</h3>
+                    <p class="text-gray-200">Ensuring accurate medical communication</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
+   
 
         <section id="how-it-works" data-header-theme="light" class="standard-section bg-gray-100">
             <div class="container mx-auto px-4 text-center">
@@ -188,7 +166,7 @@
                     <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
                          <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4">1</div>
                          <h3 class="text-xl font-semibold text-gray-800 mb-2">Sign Up & Install</h3>
-                         <p class="text-gray-500">Join the waitlist or early access program and easily install the InterpreCoach extension.</p>
+                         <p class="text-gray-500">Join the wait list or early access program and easily install the InterpreCoach extension.</p>
                     </div>
      
                      <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">

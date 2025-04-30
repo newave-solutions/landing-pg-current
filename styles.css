@@ -37,7 +37,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 .hero-bg-image.active {
     opacity: 1;
@@ -121,6 +121,52 @@ body {
 #main-header.header-inverted .nav-link:hover {
     color: #3b82f6;
 }
+/* --- Video Styling --- */
+.challenge-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.challenge-video.loaded {
+    opacity: 1;
+}
+
+.video-card {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -5;
+}
+
+/* Fallback states */
+.challenge-video-fallback {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -15;
+}
+
+@media (max-width: 768px) {
+    .video-card {
+        aspect-ratio: 16/9;
+    }
+}
 
 /* --- Testimonial Swiper Styles --- */
 #testimonials .swiper-button-next,
@@ -149,6 +195,10 @@ body {
 #testimonials .swiper-button-prev {
      transform: scale(0.8); 
     } 
+}
+
+video:not([playsinline]) {
+    object-fit: contain;
 }
 
  /* --- Footer Styling --- */
