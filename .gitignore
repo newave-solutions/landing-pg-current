@@ -1,0 +1,7 @@
+# Basic ignore rules
+node_modules/
+.env
+*.log
+__pycache__/
+dist/
+.vscode/

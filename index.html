@@ -35,7 +35,7 @@
                     Signup
                 </a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+            <buttonbutton id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Open mobile menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
 
@@ -93,15 +93,17 @@
 <section id="challenge" data-header-theme="light" class="standard-section bg-white py-16 md:py-20">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-900">The High Stakes of Medical Interpreting</h2>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Navigating complex terminology, Active listening and executing top quality renditions is paramount when a life is on the line.</p>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Navigating complex terminology, active listening, and delivering high-quality renditions are crucial when lives are at stake.</p>
         <div class="mx-auto space-y-12 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
             <!-- Video Card 1 - Stressed -->
             <div class="video-card">
                 <video class="challenge-video"
                        src="videos/stressed.mp4"
                        poster="images/stressed-poster.jpg"
-                       playsinline 
-                       muted 
+                       playsinline
+                       webkit-playsinline
+                       mozplaysinline
+                       muted
                        loop>
                     <img class="challenge-video-fallback" 
                          src="images/stressed-poster.jpg" 
@@ -114,13 +116,13 @@
                 </div>
             </div>
 
-            <!-- Video Card 2 - No Terms -->
+            <!-- Video Card 2 - Cognitive -->
             <div class="video-card">
                 <video class="challenge-video"
                        src="videos/no-terms.mp4"
                        poster="images/no-terms-poster.jpg"
-                       playsinline 
-                       muted 
+                       playsinline
+                       muted
                        loop>
                     <img class="challenge-video-fallback" 
                          src="images/no-terms-poster.jpg" 
@@ -133,13 +135,13 @@
                 </div>
             </div>
 
-            <!-- Video Card 3 - Misunderstood -->
+            <!-- Video Card 3 - Safety -->
             <div class="video-card">
                 <video class="challenge-video"
                        src="videos/misunderstood.mp4"
                        poster="images/misunderstood-poster.jpg"
-                       playsinline 
-                       muted 
+                       playsinline
+                       muted
                        loop>
                     <img class="challenge-video-fallback" 
                          src="images/misunderstood-poster.jpg" 
@@ -321,7 +323,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="script.js" defer></script>
+    <script src="/js/script.js"></script>
 
 </body>
 </html>
